@@ -13,10 +13,12 @@ require_once __DIR__ . '/classes/Product.php';
 //importo la classe User
 require_once __DIR__ . '/classes/User.php';
 
+//importo la classe CreditCard
+require_once __DIR__ . '/classes/CreditCard.php';
+
 
 
 /* Product */
-
 //inizializzo la classe Product con il costruttore
 $new_product = new Product('Leica', 'M10', 5644654,8500,00);
 
@@ -25,18 +27,20 @@ $new_product = new Product('Leica', 'M10', 5644654,8500,00);
 $new_product->color = 'Black';
 
 
-
-var_dump($new_product);
-
 //sono proprietà private, devo usare getBrand()
 //var_dump($new_product->brand);
 
-/****************************/
+        /****************************/
 
 /* User */
-
 $user1 = new User('Josef', 'Koudelka');
-var_dump($user1->getFirstname());
+
+
+        /****************************/
+
+/* CreditCard */
+$card1 = new CreditCard('Gilles', 'Peress');
+var_dump($card1);
 
 
 ?>
