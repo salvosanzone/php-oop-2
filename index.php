@@ -23,25 +23,28 @@ require_once __DIR__ . '/classes/CreditCard.php';
 $new_product = new Product('Leica', 'M10', 5644654,8500,00);
 
 
+
 //inizializzo la classe Product
 $new_product->color = 'Black';
 
 
-//sono proprietà private, devo usare getBrand()
-//var_dump($new_product->brand);
 
         /****************************/
 
 /* User */
 $user1 = new User('Josef', 'Koudelka');
+var_dump($user1);
 
 
         /****************************/
 
 /* CreditCard */
-$card1 = new CreditCard('Gilles', 'Peress');
-var_dump($card1);
+$card1 = new CreditCard('IT654654654565');
 
+
+//collego l' user1 e la card1
+$user1->creditcard = $card1;
+var_dump($user1);
 
 ?>
 

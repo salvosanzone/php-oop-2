@@ -5,6 +5,9 @@ class User{
   //Proprietà
   private $firstname;
   private $lastname;
+  
+  //inserisco successivamente una proprietà che non è di base presente nella classe User
+  public $creditcard;
 
   //Costruttore
   function __construct($_firstname, $_lastname)
@@ -36,4 +39,9 @@ class User{
     return $this->lastname;
   }
 
+
+  //creo un metodo insertCreditCard che ha come parametro una instanza della classe CreditCard
+  // public function insertCreditCard(){
+
+  // }
 }
