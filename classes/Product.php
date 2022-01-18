@@ -7,21 +7,33 @@ class Product{
   private $brand;
   private $name;
   private $code;
+  private $price;
   public $color;
 
   //Costruttore
-  function __construct($_brand, $_name, $_code)
+  function __construct($_brand, $_name, $_code, $_price)
   {
     $this->brand = $_brand;
     $this->name = $_name;
     $this->code = $_code;
+    $this->price = $_price;
   }
 
-  //Metodi
+
 
 
   //Setter
+  public function setBrand($_brand){
+    $this->brand = $_brand;
+  }
 
+  public function setName($_name){
+    $this->name = $_name;
+  }
+
+  public function setCode($_code){
+    $this->code = $_code;
+  }
 
 
 
@@ -36,6 +48,10 @@ class Product{
 
   public function getCode(){
     return $this->code;
+  }
+
+  public function getPrice(){
+    return $this->price;
   }
 
 }

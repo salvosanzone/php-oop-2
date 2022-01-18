@@ -10,18 +10,33 @@ $user->insertCreditCard($c);
 //importo la classe Product
 require_once __DIR__ . '/classes/Product.php';
 
+//importo la classe User
+require_once __DIR__ . '/classes/User.php';
 
+
+
+/* Product */
 
 //inizializzo la classe Product con il costruttore
-$new_product = new Product('Leica', 'M10', 5644654);
+$new_product = new Product('Leica', 'M10', 5644654,8500,00);
+
 
 //inizializzo la classe Product
 $new_product->color = 'Black';
+
+
 
 var_dump($new_product);
 
 //sono proprietà private, devo usare getBrand()
 //var_dump($new_product->brand);
+
+/****************************/
+
+/* User */
+
+$user1 = new User('Josef', 'Koudelka');
+var_dump($user1->getFirstname());
 
 
 ?>
@@ -51,12 +66,30 @@ var_dump($new_product);
         <li>
           <?php echo $new_product->getCode(); ?>
         </li>
+        <h4>Price</h4>
+        <li>
+          <?php echo $new_product->getPrice(); ?>$
+        </li>
         <h4>Color</h4>
         <li>
           <?php echo $new_product->color; ?>
         </li>
       </ul>
   <!-- /PRODUCT -->
+
+  <!-- USER -->
+    <h2>User</h2>
+      <ul>
+        <h4>Firstname</h4>
+        <li>
+          <?php echo $user1->getFirstname(); ?>
+        </li>
+        <h4>Lastname</h4>
+        <li>
+          <?php echo $user1->getLastname(); ?>
+        </li>
+      </ul>
+  <!-- /USER -->
 
 </body>
 </html>
