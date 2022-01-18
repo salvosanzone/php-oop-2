@@ -43,7 +43,9 @@ $card1 = new CreditCard('IT654654654565');
 
 
 //collego l' user1 e la card1
-$user1->creditcard = $card1;
+//$user1->creditcard = $card1;
+$user1->insertCreditCard($card1);
+
 var_dump($user1);
 
 ?>
