@@ -7,17 +7,16 @@ class User{
   private $lastname;
   private $age;
   public $email;
+  public $discount = 0;
   
-  //inserisco successivamente una proprietà che non è di base presente nella classe User quindi non la metto nel costrutto
+  //inserisco una proprietà che non è di base presente nella classe User quindi non la metto nel costrutto
   private $creditcard;
 
   //Costruttore
-  function __construct($_firstname, $_lastname,$_age, $_email)
+  function __construct($_firstname, $_lastname)
   {
     $this->firstname = $_firstname;
     $this->lastname = $_lastname;
-    $this->age = $_age;
-    $this->email = $_email;
   }
 
 

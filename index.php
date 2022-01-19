@@ -6,6 +6,7 @@ require_once __DIR__ . '/classes/Product.php';
 require_once __DIR__ . '/classes/User.php';
 require_once __DIR__ . '/classes/CreditCard.php';
 require_once __DIR__ . '/classes/Customer.php';
+require_once __DIR__ . '/classes/CostumerPremium.php';
 
 
 
@@ -21,7 +22,7 @@ $new_product->color = 'Black';
 /****************************
  User
  ****************************/
-$user1 = new User('Josef', 'Koudelka', 73, 'josef@gmail.com');
+$user1 = new User('Josef', 'Koudelka');
 var_dump($user1);
 
 
@@ -29,8 +30,15 @@ var_dump($user1);
 /****************************
  Customer
  ****************************/
-$customer1 = new Customer('Gilles', 'Peress', 60, 'peress.gilles@gmail.com');
+$customer1 = new Customer('Gilles', 'Peress');
 var_dump($customer1);
+
+
+/****************************
+ CustomerPremium
+ ****************************/
+$c_premium1 = new CustomerPremium('Alex', 'Majoli');
+var_dump($c_premium1);
 
 
 
@@ -46,7 +54,7 @@ $card1 = new CreditCard('IT654654654565');
 
 //collego l'user1 e la card1 passandola come parametro di un metodo
 $user1->insertCreditCard($card1);
-var_dump($user1);
+//var_dump($user1);
 
 ?>
 
@@ -61,7 +69,7 @@ var_dump($user1);
 <body>
 
   <!-- PRODUCT -->
-    <h2>Product</h2>
+    <!-- <h2>Product</h2>
       <ul>
         <h4>Brand</h4>
         <li>
@@ -83,11 +91,11 @@ var_dump($user1);
         <li>
           <?php echo $new_product->color; ?>
         </li>
-      </ul>
+      </ul> -->
   <!-- /PRODUCT -->
 
   <!-- USER -->
-    <h2>User</h2>
+    <!-- <h2>User</h2>
       <ul>
         <h4>Firstname</h4>
         <li>
@@ -97,7 +105,7 @@ var_dump($user1);
         <li>
           <?php echo $user1->getLastname(); ?>
         </li>
-      </ul>
+      </ul> -->
   <!-- /USER -->
 
 </body>
