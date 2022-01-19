@@ -37,7 +37,7 @@ var_dump($customer1);
 /****************************
  CustomerPremium
  ****************************/
-$c_premium1 = new CustomerPremium('Alex', 'Majoli');
+$c_premium1 = new CustomerPremium('James', 'Nachtwey');
 var_dump($c_premium1);
 
 
@@ -45,16 +45,11 @@ var_dump($c_premium1);
 /****************************
  CreditCard
  ****************************/
-$card1 = new CreditCard('IT654654654565');
+$card1 = new CreditCard(454878451245, 'Josef Koudelka', 224, 5, 2026);
+var_dump($card1);
 
 
 
-//collego l'user1 e la card1 ma essendo una proprieta privata mi darà errore
-//$user1->creditcard = $card1;
-
-//collego l'user1 e la card1 passandola come parametro di un metodo
-$user1->insertCreditCard($card1);
-//var_dump($user1);
 
 ?>
 

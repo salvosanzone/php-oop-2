@@ -7,7 +7,7 @@ class User{
   private $lastname;
   private $age;
   public $email;
-  public $discount = 0;
+  protected $discount = 0;
   
   //inserisco una proprietà che non è di base presente nella classe User quindi non la metto nel costrutto
   private $creditcard;
