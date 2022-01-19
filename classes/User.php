@@ -5,15 +5,19 @@ class User{
   //Proprietà
   private $firstname;
   private $lastname;
+  private $age;
+  public $email;
   
-  //inserisco successivamente una proprietà che non è di base presente nella classe User
+  //inserisco successivamente una proprietà che non è di base presente nella classe User quindi non la metto nel costrutto
   private $creditcard;
 
   //Costruttore
-  function __construct($_firstname, $_lastname)
+  function __construct($_firstname, $_lastname,$_age, $_email)
   {
     $this->firstname = $_firstname;
     $this->lastname = $_lastname;
+    $this->age = $_age;
+    $this->email = $_email;
   }
 
 

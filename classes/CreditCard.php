@@ -1,14 +1,12 @@
 <?php
 
-
-
-
 class CreditCard {
+
+  //Proprietà
   private $iban;
 
 
   //Costruttore
-
   function __construct($_iban)
   {
     $this->iban = $_iban;

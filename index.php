@@ -1,51 +1,51 @@
 <?php 
-/* provate ad immaginare quali sono le classi necessarie per creare uno shop online; ad esempio, ci saranno sicuramente dei prodotti da acquistare e degli utenti che fanno shopping.
-Strutturare le classi gestendo l’ereditarietà dove necessario; ad esempio ci potrebbero essere degli utenti premium che hanno diritto a degli sconti esclusivi, oppure diverse tipologie di prodotti.
-Provate a far interagire tra di loro gli oggetti: ad esempio, l’utente dello shop inserisce una carta di credito...
-$c = new CreditCard(..);
-$user->insertCreditCard($c);
-*/
 
 
-//importo la classe Product
+//importo la classe
 require_once __DIR__ . '/classes/Product.php';
-
-//importo la classe User
 require_once __DIR__ . '/classes/User.php';
-
-//importo la classe CreditCard
 require_once __DIR__ . '/classes/CreditCard.php';
+require_once __DIR__ . '/classes/Customer.php';
 
 
 
-/* Product */
-//inizializzo la classe Product con il costruttore
+/****************************
+ Product
+ ****************************/
 $new_product = new Product('Leica', 'M10', 5644654,8500,00);
-
-
-
-//inizializzo la classe Product
 $new_product->color = 'Black';
 
 
 
-        /****************************/
 
-/* User */
-$user1 = new User('Josef', 'Koudelka');
+/****************************
+ User
+ ****************************/
+$user1 = new User('Josef', 'Koudelka', 73, 'josef@gmail.com');
 var_dump($user1);
 
 
-        /****************************/
 
-/* CreditCard */
+/****************************
+ Customer
+ ****************************/
+$customer1 = new Customer('Gilles', 'Peress', 60, 'peress.gilles@gmail.com');
+var_dump($customer1);
+
+
+
+/****************************
+ CreditCard
+ ****************************/
 $card1 = new CreditCard('IT654654654565');
 
 
-//collego l' user1 e la card1
-//$user1->creditcard = $card1;
-$user1->insertCreditCard($card1);
 
+//collego l'user1 e la card1 ma essendo una proprieta privata mi darà errore
+//$user1->creditcard = $card1;
+
+//collego l'user1 e la card1 passandola come parametro di un metodo
+$user1->insertCreditCard($card1);
 var_dump($user1);
 
 ?>
